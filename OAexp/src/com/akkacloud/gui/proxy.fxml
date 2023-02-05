@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="223.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.akkacloud.gui.proxyController">
+   <children>
+      <RadioButton fx:id="openProxy" layoutX="63.0" layoutY="47.0" mnemonicParsing="false" text="开启">
+         <toggleGroup>
+            <ToggleGroup fx:id="proxyStatus" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="CloseProxy" layoutX="169.0" layoutY="47.0" mnemonicParsing="false" text="关闭" toggleGroup="$proxyStatus" />
+      <Label layoutX="41.0" layoutY="83.0" text="IP地址:" />
+      <Label layoutX="46.0" layoutY="132.0" text="端口:" />
+      <TextField fx:id="proxyIP" layoutX="88.0" layoutY="78.0" />
+      <TextField fx:id="proxyPort" layoutX="88.0" layoutY="127.0" />
+      <Label layoutX="11.0" layoutY="6.0" prefHeight="27.0" prefWidth="129.0" text="HTTP 代理设置" />
+      <Button fx:id="saveProxyBtn" layoutX="88.0" layoutY="169.0" mnemonicParsing="false" onAction="#saveProxy" text="保存" />
+      <Button fx:id="closeProxyBtn" layoutX="158.0" layoutY="169.0" mnemonicParsing="false" onAction="#closeProxy" text="关闭" />
+   </children>
+</AnchorPane>
